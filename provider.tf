@@ -6,13 +6,7 @@ terraform {
     }
   }
 }
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Create a VPC
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
-}
+ subscription_id=var.subscription_id
+  client_id=var.client_id
+  client_secret=var.client_secret
+  tenant_id=var.tenant_id
