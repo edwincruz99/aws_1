@@ -1,12 +1,10 @@
-data "aws_ami" "example" {
+data "aws_ami" "amz_linux2" {
   executable_users = ["self"]
   most_recent      = true
-  name_regex       = "^myami-\\d{3}"
-  owners           = ["self"]
 
   filter {
     name   = "name"
-    values = ["myami-*"]
+    values = ["amzn2-ami-hvm-*x86_64-gp2"]
   }
 
   filter {
@@ -18,4 +16,8 @@ data "aws_ami" "example" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+filter {
+  name = "architecture"
+  values = ["x86_64"]
+ }
 }
