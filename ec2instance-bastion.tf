@@ -12,5 +12,4 @@ key_name = var.instance_keypair
 subnet_id  = module.vpc.public_subnet[0]
 #vpc_security_group_ids 
 vpc_security_group_ids = [module.public_bastion_sg.security_group_id]
-tag = local.comon_tags
 }
